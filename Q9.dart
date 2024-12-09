@@ -1,24 +1,17 @@
-
 import 'dart:io';
 
 void main() {
-  print("enter your number :");
+  print(   "enter your number");
   int number = int.parse(stdin.readLineSync()!);
-  if (number % 2 == 0) {
-    print(" the number is even");
-  }
-  if (number % 5 == 0) {
-    print("number is divisible by 5");
-  }else{
-    print("the number is not a divisible by 5");
-  }
-{ 
-    print("the number is odd");
-  }
-  if (number % 7 == 0) {
-    print("number is divisible by 7");
+  if (number % 5 == 0 || number % 7 == 0) {
+    if (number % 5 == 0 && number % 7 == 0) {
+      print("number is divisible by both");
+    } else if (number % 5 == 0) {
+      print("number is divisble by 5");
+    } else {
+      print("number is divisible by 7");
+    }
   } else {
-    print("the number is ood");
+    print("number is not divisible by 5 or 7");
   }
-  
 }
